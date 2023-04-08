@@ -53,7 +53,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sum1 = sum(sum(a, b)[0], c)[0];
-  let prod1 = multiply(multiply(a, b)[0], c)[0];;
+  let prod1 = multiply(multiply(a, b)[0], c)[0];
   let stringSum= `${a} and ${b} and ${c} sum to ${sum1}.`;
   let stringProd = `The product of ${a} and ${b} and ${c} is ${prod1}.`;
   return [sum1, prod1, stringSum, stringProd];
@@ -75,11 +75,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-// 
+let testArray = [2, 3, 4]; //eslint-disable-line
+testArray[0];
+
+function sumArray(sumArr) { //eslint-disable-line
+  let sum3 = 0;
+  for (let i = 0; i < sumArr.length; i++){
+    sum3 = sum(sum3, sumArr[i])[0];
+    // console.log(sum3);
+  }
+  let stringer = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
+  return [sum3, stringer];
+}
 
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -95,7 +105,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 // function multiplyArray(multArr) { //eslint-disable-line
-
+// let testArray = [2, 3, 4]; //eslint-disable-line
+// testArray[0];
+// console.log(testArray);
+// function multiplyArray(multArr) { //eslint-disable-line
+//   let prod3 = 1;
+//   for (let i = 0; i < multArr.length; i++){
+//     prod3 = multiply(prod3, multArr[i])[0];
+//     // console.log(prod3);
+//   }
+//   let stringer = 'The numbers 2,3,4 have a product of 24.';
+//   return [prod3, stringer];
 // }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -121,6 +141,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 // let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+
+
 
 // function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
